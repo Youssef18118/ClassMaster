@@ -1,0 +1,17 @@
+﻿@model Department
+
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span style="color:red" asp-validation-for="Name"></span>
+</div>
+<div class="form-group">
+    <label asp-for="DepartmentManager"></label>
+    <input asp-for="DepartmentManager" class="form-control" />
+    <span style="color:red" asp-validation-for="DepartmentManager"></span>
+</div>
+
+
+
+<br />
+<button type="submit" class="btn btn-outline-primary">Save</button>

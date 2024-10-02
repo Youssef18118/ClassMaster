@@ -1,0 +1,99 @@
+﻿@model IEnumerable<crsResultIndexVM>
+
+@section title {
+    Results List
+}
+
+@section style {
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+
+        footer {
+            margin-top: 100px;
+        }
+    </style>
+
+}
+
+<br />
+<br />
+<a href="/addres/" class="btn btn-primary">New</a>
+<br />
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th />
+            <th />
+            <th />
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var trainee in Model)
+            {
+                <tr>
+                    <td>@trainee.Name</td>
+                    <td>@trainee.DepartmentName</td>
+                    <td class="align-middle"><a href="/getallres/@trainee.Id" class="btn btn-outline-info">Details</a></td>
+                    <td class="align-middle">
+                        <button class="btn btn-outline-danger" onclick="showDeleteModal('@trainee.Id')">Delete</button>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">No trainees available</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section scripts {
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#deleteModal').modal('hide')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this trainee's Course results?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelDeleteBtn">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let instructorIdToDelete;
+
+        function showDeleteModal(id) {
+            instructorIdToDelete = id;
+            $('#deleteModal').modal('show');
+        }
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+            window.location.href = '/deleteres/' + instructorIdToDelete;
+        });
+
+        document.getElementById('cancelDeleteBtn').addEventListener('click', function () {
+            $('#deleteModal').modal('hide');
+        });
+    </script>
+}

@@ -1,0 +1,35 @@
+﻿@model Course
+
+@section title {
+        Course: @Model.Name
+}
+@section style {
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+
+        footer {
+            margin-top: 210px;
+        }
+    </style>
+
+}
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card" style="width: 100%; max-width: 600px;">
+        <div class="card-body text-center">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text">
+                <strong>ID:</strong> @Model.Id <br />
+                <strong>Degree:</strong> @Model.Degree <br />
+                <strong>MinDegree:</strong> @Model.Mindegree <br />
+                <strong>Department:</strong> @Model.Department?.Name <br />
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 d-flex justify-content-center">
+    <a href="@Url.Action("Index", "Course")" class="btn btn-secondary">Back to List</a>
+</div>

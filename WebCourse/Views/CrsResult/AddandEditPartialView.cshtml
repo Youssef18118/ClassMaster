@@ -1,0 +1,29 @@
+﻿@model CrsResult
+@{
+    SelectList deptOpt = new SelectList(ViewBag.Trainees, "Id", "Name");
+    SelectList deptOpt2 = new SelectList(ViewBag.Courses, "Id", "Name");
+    SelectList deptOpt3 = new SelectList(new List<string> { "Pass", "Fails" });
+
+}
+
+
+
+<div class="form-group">
+    <label asp-for="TraineeId"></label>
+    <select asp-for="TraineeId" asp-items="deptOpt" class="form-control">
+    </select>
+</div>
+<div class="form-group">
+    <label asp-for="CourseId"></label>
+    <select asp-for="CourseId" asp-items="deptOpt2" class="form-control">
+    </select>
+</div>
+
+<div class="form-group">
+    <label asp-for="Degree"></label>
+    <select asp-for="Degree" asp-items="deptOpt3" class="form-control">
+    </select>
+</div>
+
+<br />
+<button type="submit" class="btn btn-outline-primary">Save</button>

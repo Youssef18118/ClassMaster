@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\WebCourse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{75D39CD0-F59C-43A8-A28F-73601EED8ABE}|WebCourse\\WebCourse.csproj|d:\\c#\\webcourse\\webcourse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75D39CD0-F59C-43A8-A28F-73601EED8ABE}|WebCourse\\WebCourse.csproj|solutionrelative:webcourse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75D39CD0-F59C-43A8-A28F-73601EED8ABE}|WebCourse\\WebCourse.csproj|D:\\C#\\WebCourse\\webcourse\\viewmodels\\crsresultdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75D39CD0-F59C-43A8-A28F-73601EED8ABE}|WebCourse\\WebCourse.csproj|solutionrelative:webcourse\\viewmodels\\crsresultdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C#\\WebCourse\\WebCourse\\Program.cs",
+              "RelativeDocumentMoniker": "WebCourse\\Program.cs",
+              "ToolTip": "D:\\C#\\WebCourse\\WebCourse\\Program.cs",
+              "RelativeToolTip": "WebCourse\\Program.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAADsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T07:03:04.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CrsResultDetailsVM.cs",
+              "DocumentMoniker": "D:\\C#\\WebCourse\\WebCourse\\ViewModels\\CrsResultDetailsVM.cs",
+              "RelativeDocumentMoniker": "WebCourse\\ViewModels\\CrsResultDetailsVM.cs",
+              "ToolTip": "D:\\C#\\WebCourse\\WebCourse\\ViewModels\\CrsResultDetailsVM.cs",
+              "RelativeToolTip": "WebCourse\\ViewModels\\CrsResultDetailsVM.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T07:02:55.757Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

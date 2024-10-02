@@ -1,0 +1,38 @@
+﻿@model Instructor
+@{
+    SelectList deptOpt = new SelectList(ViewBag.Departments, "Id", "Name");
+    SelectList deptOpt2 = new SelectList(ViewBag.Courses, "Id", "Name");
+}
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span style="color:red" asp-validation-for="Name"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Salary"></label>
+    <input asp-for="Salary" class="form-control" />
+    <span style="color:red" asp-validation-for="Salary"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Address"></label>
+    <input asp-for="Address" class="form-control" />
+    <span style="color:red" asp-validation-for="Address"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Image"></label>
+    <input asp-for="Image" class="form-control" />
+    <span style="color:red" asp-validation-for="Image"></span>
+</div>
+<div class="form-group">
+    <label asp-for="DepartmentId"></label>
+    <select asp-for="DepartmentId" asp-items="deptOpt" class="form-control">
+    </select>
+</div>
+<div class="form-group">
+    <label asp-for="CourseId"></label>
+    <select asp-for="CourseId" asp-items="deptOpt2" class="form-control">
+    </select>
+</div>
+
+<br />
+<button type="submit" class="btn btn-outline-primary">Save</button>

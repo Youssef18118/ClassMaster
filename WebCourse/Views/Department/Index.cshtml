@@ -1,0 +1,78 @@
+﻿@model ICollection<Department>
+
+@section title {
+    Department List
+}
+
+<br />
+<br />
+<a href="/adddep/" class="btn btn-primary">New</a>
+<br />
+<br />
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Name</th>
+                <th />
+                <th />
+                <th />
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Course in Model)
+            {
+                <tr>
+                    <td class="text-center align-middle">@Course.Id</td>
+                    <td class="align-middle">@Course.Name</td>
+                    <td class="align-middle"><a href="/getalldep/@Course.Id" class="btn btn-outline-info">Details</a></td>
+                    <td class="align-middle"><a href="/editdep/@Course.Id" class="btn btn-outline-success">Update</a></td>
+                    <td class="align-middle">
+                        <button class="btn btn-outline-danger" onclick="showDeleteModal('@Course.Id')">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section scripts {
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#deleteModal').modal('hide')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this Course?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelDeleteBtn">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let instructorIdToDelete;
+
+        function showDeleteModal(id) {
+            instructorIdToDelete = id;
+            $('#deleteModal').modal('show');
+        }
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+            window.location.href = '/deldep/' + instructorIdToDelete;
+        });
+
+        document.getElementById('cancelDeleteBtn').addEventListener('click', function () {
+            $('#deleteModal').modal('hide');
+        });
+    </script>
+}

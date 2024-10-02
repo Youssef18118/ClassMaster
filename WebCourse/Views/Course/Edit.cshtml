@@ -1,0 +1,23 @@
+﻿@model Course
+@section Title {
+        Edit @Model.Name Data
+}
+
+@section style {
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+
+    </style>
+
+}
+
+<br />
+<a href="@Url.Action("Index", "Course")" class="btn btn-secondary">Back to List</a>
+<br />
+<form method="post" asp-action="SaveEdit" asp-controller="Course" class="pt-3 pb-5">
+    <input asp-for="Id" type="hidden" />
+    <partial name="AddandEditPartial" />
+</form>

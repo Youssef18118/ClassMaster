@@ -1,0 +1,27 @@
+﻿@model Department
+@section Title {
+            Edit @Model.Name Data
+}
+
+@section style {
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+
+        footer {
+            margin-top: 120px;
+        }
+
+    </style>
+
+}
+
+<br />
+<a href="@Url.Action("Index", "Department")" class="btn btn-secondary">Back to List</a>
+<br />
+<form method="post" asp-action="SaveEdit" asp-controller="Department" class="pt-3 pb-5">
+    <input asp-for="Id" type="hidden" />
+    <partial name="AddandEditPartial" />
+</form>

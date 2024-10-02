@@ -1,0 +1,21 @@
+﻿@section Title {
+    Add Trainee
+}
+@section style {
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+    </style>
+
+}
+
+
+<br />
+<a href="@Url.Action("Index", "Trainee")" class="btn btn-secondary">Back to List</a>
+
+<form method="post" asp-action="SaveAdd" asp-controller="Trainee" class="pt-4 pb-5">
+
+    <partial name="AddandEditPartial" />
+</form>

@@ -1,0 +1,25 @@
+﻿@model Instructor
+@{
+    SelectList deptOpt = new SelectList(ViewBag.Departments, "Id", "Name");
+    SelectList deptOpt2 = new SelectList(ViewBag.Courses, "Id", "Name");
+}
+@section Title{
+    Add Instructor
+}
+@section style{
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+    </style>
+
+}
+
+
+<br />
+<a href="@Url.Action("Index", "Instructor")" class="btn btn-secondary">Back to List</a>
+
+<form method="post" asp-action="SaveAdd" asp-controller="Instructor" class="pt-4 pb-5">
+    <partial name="AddandEditPartialView" />
+</form>

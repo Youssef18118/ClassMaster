@@ -1,0 +1,26 @@
+﻿@model CrsResult
+
+@section Title {
+    Add Course Result
+}
+@section style {
+    <style>
+        header {
+            height: 150px;
+            align-content: flex-end
+        }
+
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+
+}
+
+
+<br />
+<a href="@Url.Action("Index", "CrsResult")" class="btn btn-secondary">Back to List</a>
+
+<form method="post" asp-action="SaveAdd" asp-controller="CrsResult" class="pt-4 pb-5">
+    <partial name="AddandEditPartialView" />
+</form>
